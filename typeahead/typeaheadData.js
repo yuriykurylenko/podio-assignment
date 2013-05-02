@@ -19,6 +19,8 @@ typeahead.service('typeaheadData', ['$http', '$injector', function($http, $injec
                             { method: 'GET', url: url }
                         ).success(function(data) {
                             callback( parser.parse(data) );
+                        }).error(function(html, statusCode) {
+                            throw new Error(url + ' responded with status code ' + statusCode);
                         });
                     }
                 }]);

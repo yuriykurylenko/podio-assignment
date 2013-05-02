@@ -135,7 +135,7 @@ typeahead.directive('typeahead', ['typeaheadData', function(typeaheadData) {
 
             // Showing list if its not empty, else hiding
             scope.toShowList = function() {
-                // !!listEl - short way to convert number to boolean
+                // !!n - short way to convert number to boolean
                 return !!listEl.find('li').length;
             };
 
