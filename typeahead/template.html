@@ -1,0 +1,16 @@
+<div class="span4 typeahead">
+    <input type="text" class="filter" ng-model="filter" />
+    <div class="well" ng-show="toShowList()">
+        <ul class="nav nav-list">
+            <li id="item{{ item.id }}" class="{{ getItemClass(item) }}" ng-click="activate(item.id)"
+                ng-repeat="item in items | typeaheadMatch: { name: filter }">
+                <span class="thumb">
+                    {{ insertThumbnailImageIfExists(item) }}
+                </span>
+                <a target="_blank" href="{{ item.url }}" class="item-link">
+                    {{ highlightMatches(item) }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

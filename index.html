@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="Podio">
+    <head>
+        <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="typeahead/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Newly introduced HTML tag, implemented as an Angular directive -->
+        <typeahead data-url="json/podio.json" data-parser="podio" />
+        <!-- "data-url" specifies data source url for this component,
+             "data-parser" is the name of the service to be used
+             for converting data from the source to component-compatible format -->
+
+        <!-- external libraries from CDN -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://code.angularjs.org/1.0.6/angular.min.js"></script>
+        <!-- /external libraries -->
+
+        <!-- typeahead component scripts -->
+        <script src="typeahead/typeahead.js"></script>
+        <script src="typeahead/typeaheadData.js"></script>
+        <script src="typeahead/typeaheadMatch.js"></script>
+        <!-- /typeahead component scripts -->
+
+        <!-- app-related scripts -->
+        <script src="app/app.js"></script>
+        <script src="app/service/parser/podio.js"></script>
+        <!-- /app-related scripts -->
+    </body>
+</html>

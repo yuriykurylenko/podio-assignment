@@ -1,0 +1,27 @@
+.typeahead {
+    margin: 15px;
+}
+
+ul.nav li {
+    line-height: 30px;
+}
+
+ul.nav li.custom-header {
+    font-size: 14px;
+}
+
+.thumb {
+    float: left;
+    display: block;
+    width: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.thumb img {
+    width: 30px;
+}
+
+.hl {
+    background-color: yellow;
+}
