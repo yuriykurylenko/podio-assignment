@@ -84,7 +84,7 @@ typeahead.directive('typeahead', ['typeaheadData', function(typeaheadData) {
 
             // Inserting a thumbnail in case if its link specified
             scope.insertThumbnailImageIfExists = function(item) {
-                angular.element('#item' + item.id + ' .thumb').html(
+                listEl.find('li#item' + item.id + ' .thumb').html(
                     item.thumbnail_link ? '<img src="' + item.thumbnail_link + '" />' : '&nbsp;'
                 );
             };
@@ -107,7 +107,7 @@ typeahead.directive('typeahead', ['typeaheadData', function(typeaheadData) {
                     }
                 }
 
-                angular.element('#item' + item.id + ' .item-link').html(highlightedName);
+                listEl.find('li#item' + item.id + ' .item-link').html(highlightedName);
             };
 
             // Handling different types of input:
